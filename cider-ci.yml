@@ -47,7 +47,7 @@ jobs:
         timeout:
           scripts:
             timeout:
-              body: timeout /t 30
+              body: timeout /t 30 /nobreak
               timeout: 3
             sleep:
-              body: timeout /t 30
+              body: timeout /t 30 /nobreak
