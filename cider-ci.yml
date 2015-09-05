@@ -11,17 +11,19 @@ jobs:
           windows: true
 
       tasks:
+
         exit_stati:
           scripts:
-
             succeed:
               body: |
                 exit /b 0
-
             fail:
               body: |
                 exit /b 1
               ignore-state: true
 
-
+        list_env_vars:
+          scripts:
+            list_env_vars:
+              body: set
 
