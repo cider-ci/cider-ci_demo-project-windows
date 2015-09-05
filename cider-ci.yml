@@ -1,8 +1,7 @@
 
 jobs:
 
-  demo1:
-    name: Demo1
+  exit_stati:
 
     context:
 
@@ -22,8 +21,33 @@ jobs:
                 exit /b 1
               ignore-state: true
 
+  list_env_vars:
+
+    context:
+
+      task-defaults:
+        traits:
+          windows: true
+
+      tasks:
         list_env_vars:
           scripts:
             list_env_vars:
               body: set
 
+  sleep_and_timeouts:
+
+    context:
+
+      task-defaults:
+        traits:
+          windows: true
+
+      tasks:
+        timeout:
+          scripts:
+            timeout:
+              body: timeout /t 30
+              timeout: 3
+            sleep:
+              body: timeout /t 30
