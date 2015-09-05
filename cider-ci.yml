@@ -46,10 +46,8 @@ jobs:
       tasks:
         timeout:
           scripts:
-            timeout:
-              body: |
-                timeout /t 30 /nobreak > NUL
+            violating_timeout:
+              body: ping -n 10 127.0.0.1
               timeout: 3
             sleep:
-              body: |
-                timeout /t 30 /nobreak > NUL
+              body: ping -n 30 127.0.0.1
