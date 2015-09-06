@@ -1,6 +1,22 @@
 
 jobs:
 
+  tasklist:
+
+    context:
+
+      task-defaults:
+        traits:
+          windows: true
+
+      tasks:
+
+        tasklist:
+          scripts:
+            tasklist:
+              body:  tasklist
+
+
   exit_stati:
 
     context:
