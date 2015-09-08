@@ -14,6 +14,7 @@ jobs:
         tasklist:
           scripts:
             tasklist:
+              timeout: 10
               body:  tasklist
 
 
@@ -30,9 +31,11 @@ jobs:
         exit_stati:
           scripts:
             succeed:
+              timeout: 10
               body: |
                 exit /b 0
             fail:
+              timeout: 10
               body: |
                 exit /b 1
               ignore-state: true
@@ -47,6 +50,7 @@ jobs:
 
       tasks:
         list_env_vars:
+          timeout: 10
           scripts:
             list_env_vars:
               body: set
@@ -67,3 +71,4 @@ jobs:
               timeout: 3
             sleep:
               body: ping -n 30 127.0.0.1
+              timeout: 45
